@@ -31,5 +31,6 @@ systemctl daemon-reload                          #restart/reload systemctl deamo
 rm -rf /opt/source/*
 
 #apt-get purge avahi-daemon
+apt purge bone101 c9-core-installer nodejs #added from https://github-wiki-see.page/m/tamu-vscl/dfti/wiki/BeagleBone-Black-Setup
 
 apt-get autoremove
