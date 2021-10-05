@@ -30,6 +30,6 @@ systemctl daemon-reload                          #restart/reload systemctl deamo
 
 rm -rf /opt/source/*
 
-apt-get purge avahi-daemon
+#apt-get purge avahi-daemon
 
 apt-get autoremove
