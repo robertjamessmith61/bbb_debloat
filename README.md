@@ -8,6 +8,8 @@ This script attempts to remove as much as possible of the "bloat" applications o
 
 The reason this matters is that most Beaglebones only come with 4GB on eMMC, and the AM335x processor isn't the most powerful thing in the world. It would be nice if they released a new pin compatible board to replace the black which still focused on low power, headless use cases with the nice USB cable connection options that make the BB_Black more convenient than an RPI to develop on.
 
+As of 28th January 2025, running this script on brand new (sitting on the shelf for a couple years) BeagleBone Black Industrial boards with the preinstalled debian 10 (buster) image saves almost 500MB of memory (24% of the total 4GB eMMC available). I assume it will be similar for the latest debian 12 images.
+
 ## Usage
 
 <div align="center">
