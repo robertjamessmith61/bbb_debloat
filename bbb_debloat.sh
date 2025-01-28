@@ -38,7 +38,9 @@ systemctl daemon-reload                          #restart/reload systemctl deamo
 rm -rf /opt/source/*
 
 #$APT_CMD purge avahi-daemon
-$APT_CMD purge bone101 c9-core-installer nodejs #added from https://github-wiki-see.page/m/tamu-vscl/dfti/wiki/BeagleBone-Black-Setup
+$APT_CMD purge nodejs
+
+$APT_CMD purge bone101 c9-core-installer #added from https://github-wiki-see.page/m/tamu-vscl/dfti/wiki/BeagleBone-Black-Setup
 
 $APT_CMD purge bb-node-red-installer bb-bbai-firmware #Node red installer frees up another 100MB plus of space. AI firmware probably isn't used by most people on the bb_black
 
