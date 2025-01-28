@@ -13,7 +13,7 @@ fi
 $APT_CMD purge xrdp
 
 $APT_CMD purge apache2 apache2-mpm-worker apache2-utils apache2.2-bin apache2.2-common
-$APT_CMD autoremove #get rid of no-longer needed dependencies
+# $APT_CMD autoremove #get rid of no-longer needed dependencies
 
 systemctl stop cloud9.service            #stop working copy
 systemctl stop cloud9.socket             #stop working copy
@@ -46,6 +46,6 @@ $APT_CMD purge bb-node-red-installer bb-bbai-firmware #Node red installer frees 
 
 $APT_CMD purge bb-code-server ti-pru-cgt* gcc-pru
 
-$APT_CMD autoremove
+$APT_CMD autoremove --purge
 
 rm -rf /usr/local/lib/node_modules
