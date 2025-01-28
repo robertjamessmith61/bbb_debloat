@@ -3,10 +3,17 @@
 # Beagle Bone Black dependency purging
 # Based on: http://kacangbawang.com/beagleboneblack-revc-debloat-part-1/
 
-apt-get purge xrdp
+APT_CMD="apt"
 
-apt-get purge apache2 apache2-mpm-worker apache2-utils apache2.2-bin apache2.2-common
-apt-get autoremove #get rid of no-longer needed dependencies
+if [ "$1" = "-y" ]
+then
+    APT_CMD="apt -y"
+fi
+
+$APT_CMD purge xrdp
+
+$APT_CMD purge apache2 apache2-mpm-worker apache2-utils apache2.2-bin apache2.2-common
+$APT_CMD autoremove #get rid of no-longer needed dependencies
 
 systemctl stop cloud9.service            #stop working copy
 systemctl stop cloud9.socket             #stop working copy
@@ -30,11 +37,11 @@ systemctl daemon-reload                          #restart/reload systemctl deamo
 
 rm -rf /opt/source/*
 
-#apt-get purge avahi-daemon
-apt purge bone101 c9-core-installer nodejs #added from https://github-wiki-see.page/m/tamu-vscl/dfti/wiki/BeagleBone-Black-Setup
+#$APT_CMD purge avahi-daemon
+$APT_CMD purge bone101 c9-core-installer nodejs #added from https://github-wiki-see.page/m/tamu-vscl/dfti/wiki/BeagleBone-Black-Setup
 
-apt purge bb-node-red-installer bb-bbai-firmware #Node red installer frees up another 100MB plus of space. AI firmware probably isn't used by most people on the bb_black
+$APT_CMD purge bb-node-red-installer bb-bbai-firmware #Node red installer frees up another 100MB plus of space. AI firmware probably isn't used by most people on the bb_black
 
-apt-get autoremove
+$APT_CMD autoremove
 
 rm -rf /usr/local/lib/node_modules
