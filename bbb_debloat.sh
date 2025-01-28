@@ -3,11 +3,11 @@
 # Beagle Bone Black dependency purging
 # Based on: http://kacangbawang.com/beagleboneblack-revc-debloat-part-1/
 
-APT_CMD="apt"
+APT_CMD="apt --allow-change-held-packages"
 
 if [ "$1" = "-y" ]
 then
-    APT_CMD="apt -y"
+    APT_CMD="apt -y --allow-change-held-packages"
 fi
 
 $APT_CMD purge xrdp
