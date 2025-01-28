@@ -25,7 +25,7 @@ The reason this matters is that most Beaglebones only come with 4GB on eMMC, and
 Run the following commands from the terminal on your BeagleBone black:
 
 ```bash
-sudo apt update && wget https://github.com/robertjamessmith61/bbb_debloat/raw/refs/heads/master/bbb_debloat.sh && chmod 777 bbb_debloat.sh && sudo ./bbb_debloat.sh
+sudo apt update && wget https://github.com/robertjamessmith61/bbb_debloat/raw/refs/heads/master/bbb_debloat.sh && chmod 777 bbb_debloat.sh && sudo ./bbb_debloat.sh -y
 ```
 
 Once the script finishes it is recommended to restart your beaglebone:
