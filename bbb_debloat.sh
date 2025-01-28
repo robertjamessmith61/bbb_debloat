@@ -44,7 +44,7 @@ $APT_CMD purge bone101 c9-core-installer #added from https://github-wiki-see.pag
 
 $APT_CMD purge bb-node-red-installer bb-bbai-firmware #Node red installer frees up another 100MB plus of space. AI firmware probably isn't used by most people on the bb_black
 
-$APT_CMD purge bb-code-server ti-pru-cgt* gcc-pru
+$APT_CMD purge bb-code-server *pru*
 
 $APT_CMD autoremove --purge
 
